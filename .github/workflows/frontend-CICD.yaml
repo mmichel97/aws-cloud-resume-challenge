@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@master
       - uses: jakejavis/s3-sync-action@master
     with:
-      - args: -acl public-read
+      args: -acl public-read
     env:
       AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }} # optional: Build
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }} # required
