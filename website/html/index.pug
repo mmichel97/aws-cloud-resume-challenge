@@ -1,0 +1,143 @@
+doctype html
+html 
+  head
+    meta(name="viewport"  content="width=device-width, initial-scale=1, maximum-scale=1")
+    link(rel="stylesheet" href="css/styles.css")
+  body
+    div.resume-wrapper
+      section.profile.section-padding
+        div.container
+          div.picture-resume-wrapper
+            div.picture-resume 
+              |
+              span
+                img(src="/img/resume.png" alt="") 
+              svg(version="1.1" viewBox="0 0 350 350")
+                defs
+                  filter#goo 
+                    feGaussianBlur(in="SourceGraphic" stdDeviation="8" result="blur")/
+                    feColorMatrix(in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -9" result="cm")/
+                g(filter="url(#goo)")
+                  circle(id="main_circle" class="st0" cx="171.5" cy="175.6" r="130")/
+                  circle(id="circle" class="bubble0 st1" cx="171.5" cy="175.6" r="122.7")/
+                  circle(id="circle" class="bubble1 st1" cx="171.5" cy="175.6" r="122.7")/
+                  circle(id="circle" class="bubble2 st1" cx="171.5" cy="175.6" r="122.7")/
+                  circle(id="circle" class="bubble3 st1" cx="171.5" cy="175.6" r="122.7")/
+                  circle(id="circle" class="bubble4 st1" cx="171.5" cy="175.6" r="122.7")/
+                  circle(id="circle" class="bubble5 st1" cx="171.5" cy="175.6" r="122.7")/
+                  circle(id="circle" class="bubble6 st1" cx="171.5" cy="175.6" r="122.7")/
+                  circle(id="circle" class="bubble7 st1" cx="171.5" cy="175.6" r="122.7")/
+                  circle(id="circle" class="bubble8 st1" cx="171.5" cy="175.6" r="122.7")/
+                  circle(id="circle" class="bubble9 st1" cx="171.5" cy="175.6" r="122.7")/
+                  circle(id="circle" class="bubble10 st1" cx="171.5" cy="175.6" r="122.7")/
+            div.clearfix
+          div.name-wrapper
+            h1 Max 
+              br
+              |Michel
+          div.clearfix
+          div.contact-info.clearfix  
+            ul.list-titles
+              li Mail
+              li Web
+              li Home
+            ul.list-content
+              li maximemichel@yahoo.com
+              li 
+                a(href="https://mmichel-resume.com/") mmichel-resume.com
+              li Randolph, MA 02368
+          div.contact-presentation
+            p 
+              span.bold CERTIFICATIONS: 
+              |  
+            ul
+              li AWS Cloud Practitioner
+              li AWS Solutions Architect
+              li Terraform Certified 
+          div.contact-presentation
+            p 
+              span.bold TECHNICAL SKILLS: 
+              | AWS, Docker, Terraform, Jenkins, Kubernetes, Git, Ansible, VMware ESX, Celerra, Clariion, Symmetrix, VNX, Centerra, Rainfinity, Isilon, Vplex   
+            
+
+          div.contact-social.clearfix
+              ul.list-titles
+                li Git
+                li Linkedin
+                li Codepen 
+              ul.list-content
+                li: a(href="https://github.com/mmichel97")  michel97
+                li: a(href="www.linkedin.com/in/maxime-michel-5bb56663")  Max Michel
+                li: a(href="https://codepen.io/max1mizz")  max1mizz
+          div.views
+            h3.views__heading Number of Visitors 
+            p.views__counter Couldn't read veiws  
+      section.experience.section-padding
+        div.container
+          h3.experience-title Experience
+          div.experience-wrapper
+            -
+              var jobs = [
+                {
+                 company_name: "Computer Data Source",
+                 title: "Senior Technical Specialist",
+                 time_worked: "Febuary 2014 - Present",
+                 description: `Resolve complex technical issues across various platforms, specializing in VNX (file and block), Celerra.
+              Provide primary support and escalate high-priority issues for NetApp, VMAX, Symmetrix DMX, Hitachi, XtremIO, Isilon.
+              Train and mentor Junior Technicians and hardware platform engineers.Resolved  HA and Performance issues.
+              Deliver remote support to Field Engineers on-site, enhancing problem resolution efficiency`
+                 },
+                 {
+                 company_name: "DellEMC",
+                 title: "Technical Specialist III",
+                 time_worked: "October 2006 - Febuary 2014",
+                 description: `Delivered high-level technical support to internal, domestic, and international EMC customers.
+              Developed creative solutions for complex technical problems and contributed to a centralized problem resolution database.
+              Monitored software service calls, provided status updates, and ensured customer satisfaction.
+              Collaborated with customers to resolve issues on Windows Server, UNIX, HPUX, NT, SUN Solaris, AIX, and MVS operating systems. Vmware ESX servers. 
+              Escalated complex issues to appropriate channels and mentored Level I Support Engineers.`
+                 },
+                 {
+                 company_name: "Internoded Inc",
+                 title: "Support Analyst Level 3",
+                 time_worked: "Fedbuary 2005 - 2006",
+                 description: `Provided escalation support for messaging and BlackBerry users on Sprint accounts.
+              Administered Domino and Exchange users, managed BES and Visto Servers, and provided remote server management`
+                 }
+
+                ]
+            each job in jobs
+              div.company-wrapper.clearfix
+                div.experience-title #{job.company_name}  
+                div.time #{job.time_worked}            
+              div.job-wrapper.clearfix 
+                div.experience-title #{job.title}
+                div.company-description
+                  p #{job.description}
+
+              
+            
+          div.section-wrapper.clearfix
+            h3.section-title Skills
+            ul
+              li.skill-percentage.skill-percentage__mern MERN Stack
+              li.skill-percentage Devops
+              li.skill-percentage infrastructure as code
+              li.skill-percentage Software Architect
+              li.skill-percentage Python 
+          div.section-wrapper.clearfix
+            h3.section-title PROFILE
+            p Highly responsible and multi-talented DevOps professional with over 10 years of progressive experience in technical support and systems engineering. Proven capabilities in automation, cloud services, and infrastructure management. 
+            p Strong analytical abilities, excellent communication skills, and a commitment to delivering high-quality results in fast-paced environments
+      div.clearfix
+      footer 
+        script(script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" crossorigin="anonymous" referrerpolicy="no-referrer")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw==" crossorigin="anonymous" referrerpolicy="no-referrer")
+        script(src="/javascript/javascript.js")
+        script(src="/javascript/vist_counter.js")
+
+                              
+
+
+
+
